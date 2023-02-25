@@ -17,11 +17,12 @@ public slots:
 
     void SendSelectedToAdd();
     void SendSelectedToRemove();
+    void SendCounts();
 
 signals:
     void SendToAdd(int);
     void SendToRemove(int);
-
+    void SendCountsToValidate(int, QMap<QString, int>);
 
 public:
     View(){}

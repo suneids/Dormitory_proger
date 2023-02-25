@@ -71,3 +71,8 @@ void Model::RemoveFromUncursed(int row){
         emit SendData(&students_model, &students_uncursed_model, &students_by_roles_model);
     }
 }
+
+void Model::Randomize(int, QMap<QString, int>){
+
+}
+

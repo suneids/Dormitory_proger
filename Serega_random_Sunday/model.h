@@ -10,7 +10,7 @@ public slots:
      void ReadFile(QString path);
      void AddToUncursed(int row);
      void RemoveFromUncursed(int row);
-
+     void Randomize(int, QMap<QString, int>);
 signals:
     void SendData(QStandardItemModel *students_model, QStandardItemModel *students_uncursed_model, QStandardItemModel *students_by_roles_model);
 

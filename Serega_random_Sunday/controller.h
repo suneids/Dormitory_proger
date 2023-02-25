@@ -1,11 +1,14 @@
 ﻿#ifndef CONTROLLER_H
 #define CONTROLLER_H
 #include <QObject>
+#include <QMap>
+
 class Controller:public QObject{
     Q_OBJECT
 
 public slots:
     void ValidatePath();
+    void ValidateCounts(int, QMap<QString, int>);
 
 public:
     Controller(){
@@ -17,10 +20,9 @@ public:
 
 signals:
     void SuccesPathValidation(QString path);
-    void FailedValidation(QString message);
+    void SendErrorMessage(QString message);
+    void SendCountsToRandomize(int, QMap<QString, int>);
 
-
-private:
 
 };
 #endif
